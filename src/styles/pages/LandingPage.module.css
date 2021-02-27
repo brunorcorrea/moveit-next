@@ -31,8 +31,8 @@
   height: 80px;
   padding: 5px;
 
-  background: linear-gradient( 225deg, #2f389c , #2f389c6a);
-  outline-color: var(--blue-dark);
+  background: linear-gradient( 90deg, #2f389c , #2f389c6a);
+  outline: var(--blue-dark);
 }
 
 .loginArea input::placeholder {
@@ -40,18 +40,24 @@
 }
 
 
-.loginArea button {
+.logIn{
   font-size: 0;
   outline-color: var(--blue-dark);
-  
-  background-color: #2f389c9c;
+  background-color: #2f389c;
   border: 0;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
   border-radius: 0 10px 10px 0;
+  outline: var(--blue-dark);
+
   
   width: 20%;
   height: 80px;
   padding: 5px;
+  transition: 0.25s;
+}
+.logIn:hover {
+  background: var(--green);
+
 }
 
 .loginArea div form {
@@ -62,6 +68,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+}
+.alreadyLoggedIn{
+  border: 0;
+  border-radius: 20px;
+  padding: 10px;
+  background: none;
+  color:white;
+  outline: var(--blue-dark);
 }
 
 .logoFull {
@@ -88,5 +103,8 @@
 @media (max-width: 768px) {
   .landingPageContainer{
     background: var(--blue-dark);
+  }
+  .backgroundImage {
+    display: none;
   }
 }

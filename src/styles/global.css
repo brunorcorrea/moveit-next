@@ -15,17 +15,20 @@
   --text: #666666;
   --text-highlight: #b3b9ff;
   --title: #2e384d;
+  --green: #4cd62b;
+  --red: #e83f5b;
+  --blue: #5965e0;
 
 /* global colors */
 
-  --red: #e83f5b;
-  --green: #4cd62b;
-  --blue: #5965e0;
-  --blue-dark: #4953b8;
   --blue-twitter: #2aa9e0;
+  
+  /* dark mode color scheme */
+  
+  --blue-dark: #171825;
+  /* --blue-dark: #4953b8; */
 
-/* dark mode color scheme */
-
+  --dark-green: #4c7741;
   --dark-background: #121212;
   --secondary-background: #161616;
   --dark-title: #b0b0b0;
