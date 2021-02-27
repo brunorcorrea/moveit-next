@@ -1,0 +1,92 @@
+.landingPageContainer {
+  background-color: var(--blue-dark);
+  width: 100%;
+  height: 100vh;
+  color: var(--white);
+  
+  display: flex;
+}
+
+.landingPageContainer img {
+  margin-right: 5%;
+}
+
+
+.loginArea {
+  width: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginArea input {
+  border: none;
+  border-radius: 10px 0  0 10px;
+
+  color: var(--white);
+  font-size: 1.5rem;
+
+  width: 80%;
+  height: 80px;
+  padding: 5px;
+
+  background: linear-gradient( 225deg, #2f389c , #2f389c6a);
+  outline-color: var(--blue-dark);
+}
+
+.loginArea input::placeholder {
+  color: var(--white);
+}
+
+
+.loginArea button {
+  font-size: 0;
+  outline-color: var(--blue-dark);
+  
+  background-color: #2f389c9c;
+  border: 0;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  border-radius: 0 10px 10px 0;
+  
+  width: 20%;
+  height: 80px;
+  padding: 5px;
+}
+
+.loginArea div form {
+  width: 70%;
+  margin-right: 30%;
+  display: flex;
+  
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoFull {
+  width: 55%;
+  margin-bottom: 20%;
+}
+
+.backgroundImage {
+  width: 50%;
+  height: 80%;
+}
+
+
+.loginArea strong {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 3%;
+}
+.gitMessage {
+  width: 45%;
+  margin: 5% 0;
+}
+
+@media (max-width: 768px) {
+  .landingPageContainer{
+    background: var(--blue-dark);
+  }
+}

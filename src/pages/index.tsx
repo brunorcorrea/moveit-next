@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import React from 'react';
-import { GetServerSideProps } from 'next';
+import React, { useContext, useState } from 'react';
+import Link,{ GetServerSideProps } from 'next';
+import { Redirect } from 'react-router';
 
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { Countdown } from '../components/Countdown';
@@ -10,7 +11,9 @@ import { Profile } from '../components/Profile';
 
 import styles from '../styles/pages/Home.module.css';
 import { ChallengeBox } from '../components/ChallengeBox';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
+import { ChallengesProvider, ChallengesContext } from '../contexts/ChallengesContext';
+import  LandingPage  from './LandingPage';
+import { ProfileProvider } from '../contexts/ProfileContext';
 
 interface HomeProps {
   level: number; 
@@ -18,7 +21,15 @@ interface HomeProps {
   challengesCompleted:number;
 }
 
-export default function Home(props) {
+export default function Home(props: HomeProps) {
+  const user = typeof window !== 'undefined' ? localStorage.getItem('name') : null;
+
+  if(!user){
+    if(typeof window !== 'undefined'){
+      window.location.href = "/LandingPage"
+    }
+  }
+
   return (
     <ChallengesProvider 
       level={props.level}
@@ -34,7 +45,10 @@ export default function Home(props) {
       <CountdownProvider>
         <section>
           <div>
-            <Profile />
+          <ProfileProvider>
+              <Profile />
+          </ProfileProvider>
+            
             <CompletedChallenges />
             <Countdown />
           </div>
@@ -45,7 +59,7 @@ export default function Home(props) {
       </CountdownProvider>
       </div>
     </ChallengesProvider>
-  )
+  );
 }
 
 export const getServerSideProps:GetServerSideProps = async (ctx) => {
