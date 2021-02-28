@@ -26,5 +26,5 @@
     position: absolute;
     top: 12px;
     transform: translateX(-50%);
-    color: #101010; /*extra*/
-  }
+    color: var(--title);
+    }
