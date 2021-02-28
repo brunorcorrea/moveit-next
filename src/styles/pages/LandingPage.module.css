@@ -32,7 +32,7 @@
   font-size: 1.27rem;
 
   width: 80%;
-  height: 10vh;
+  height: 7.5vh;
   padding: 5px;
 
   background: linear-gradient( 90deg, #2f389c , #2f389c6a);
@@ -55,9 +55,9 @@
 
   
   width: 20%;
-  height: 10vh;
+  height: 7.5vh;
   padding: 5px;
-  transition: 0.25s;
+  transition: 0.4s;
 }
 .logIn:hover {
   background: var(--green);
@@ -108,6 +108,8 @@
 
   .logoFull {
     max-width: 300px;
+    position: fixed;
+    top: 3rem;
   }
 
   .backgroundImage {
