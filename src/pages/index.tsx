@@ -46,7 +46,7 @@ export default function LandingPage(){
             </button>
           </form>
         </div>
-        <div>
+        <div className={styles.alreadyLoggedInContainer}>
           { user && (
             <button 
               type="submit"
