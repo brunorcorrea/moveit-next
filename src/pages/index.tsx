@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useContext, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/pages/LandingPage.module.css';
@@ -18,7 +19,11 @@ export default function LandingPage(){
 
   const user = typeof window !== 'undefined' ? localStorage.getItem('name') : null;
   return (
-    <div className={styles.landingPageContainer}>
+    <div>
+      <Head>
+        <title>Move.it</title>
+      </Head>
+      <div className={styles.landingPageContainer}>
         <img src="./background-image.svg" alt="Logo" className={ styles.backgroundImage }/>
       <div className={ styles.loginArea }>
         <img src="./logo-full.svg" alt="Logo" className={ styles.logoFull }/>
@@ -37,21 +42,22 @@ export default function LandingPage(){
             <button 
               type="submit"
               className={styles.logIn}
-            >
+              >
               <img src="./icons/arrow.svg" alt="Entrar" />
             </button>
           </form>
-        </div>
-        <div>
-          { user && (
-            <button 
-              type="submit"
-              className={styles.alreadyLoggedIn}
-              onClick={redirectToDashboard}
-            >
-              logar como {user}
-            </button>
-          )}
+          </div>
+          <div>
+            { user && (
+              <button 
+                type="submit"
+                className={styles.alreadyLoggedIn}
+                onClick={redirectToDashboard}
+              >
+                logar como {user}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
