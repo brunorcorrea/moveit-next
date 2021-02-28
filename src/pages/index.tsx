@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useContext, useState } from 'react';
-import Link from 'next/link';
 import styles from '../styles/pages/LandingPage.module.css';
 
 export default function LandingPage(){
@@ -32,7 +31,7 @@ export default function LandingPage(){
 
         <img src="./git-message.svg" alt="Mensagem do git" className={ styles.gitMessage }/>
 
-        <div>
+        <div className={styles.inputButton}>
           <form onSubmit={handleSubmit}>
             <input 
               type="text" 
@@ -46,19 +45,19 @@ export default function LandingPage(){
               <img src="./icons/arrow.svg" alt="Entrar" />
             </button>
           </form>
-          </div>
-          <div>
-            { user && (
-              <button 
-                type="submit"
-                className={styles.alreadyLoggedIn}
-                onClick={redirectToDashboard}
-              >
-                logar como {user}
-              </button>
-            )}
-          </div>
         </div>
+        <div>
+          { user && (
+            <button 
+              type="submit"
+              className={styles.alreadyLoggedIn}
+              onClick={redirectToDashboard}
+            >
+              logar como {user}
+            </button>
+          )}
+        </div>
+      </div>
       </div>
     </div>
   );
