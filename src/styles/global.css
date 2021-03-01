@@ -33,10 +33,10 @@
     --text: #666666;
     --text-highlight: #b3b9ff;
     --title: #87a0d4;
-    --green: #4cd62b;
-    --red: #e83f5b;
-    --blue: #5965e0;
-    --gray-dark: rgba(255, 255, 255, 0.1);
+    --green: #236812;
+    --red: #771c2b;
+    --blue: #282d68;
+    --gray-dark: rgba(255, 255, 255, 0.05);
   }
 }
 
