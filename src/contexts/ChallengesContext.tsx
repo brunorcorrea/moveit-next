@@ -22,7 +22,6 @@ interface ChallengesContextData {
   completeChallenge: () => void;
   closeLevelUpModal: () => void;
 }
-
 interface ChallengesProviderProps {
   children : ReactNode;
   level: number; 

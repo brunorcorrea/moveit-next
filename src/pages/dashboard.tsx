@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import Link,{ GetServerSideProps } from 'next';
-import { Redirect } from 'react-router';
 
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { Countdown } from '../components/Countdown';
@@ -11,7 +10,7 @@ import { Profile } from '../components/Profile';
 
 import styles from '../styles/pages/Home.module.css';
 import { ChallengeBox } from '../components/ChallengeBox';
-import { ChallengesProvider, ChallengesContext } from '../contexts/ChallengesContext';
+import { ChallengesProvider } from '../contexts/ChallengesContext';
 import { ProfileProvider } from '../contexts/ProfileContext';
 
 interface HomeProps {
